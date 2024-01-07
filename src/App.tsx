@@ -10,7 +10,7 @@ import { useCallback, useEffect, useState } from 'react'
 import type { Time } from './common/types'
 import useLocalStorage from './hooks/useLocalStorage'
 
-const stopwatchWorker = new Worker('./stopwatchWorker.ts')
+const stopwatchWorker = new Worker('./stopwatchWorker.js')
 
 function App() {
   const kIconSize = 96

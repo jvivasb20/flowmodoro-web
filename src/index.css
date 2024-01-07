@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+#root,
+#docs-root {
+  --kColorPrimary: #6f46a8;
+  --kColorSecondary: #1336ab;
+  --kColorBlack: #1f1f1f;
+  --kColorWhite: #ffffff;
+
+  font-family: 'Lato', sans-serif;
+
+  background-color: var(--kColorBlack);
+}

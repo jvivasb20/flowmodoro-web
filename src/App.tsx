@@ -72,7 +72,7 @@ function App() {
   }, [stopwatchWorker, updateTime, setIsRunning])
 
   return (
-    <div className='flex flex-col w-screen h-screen text-white p-8'>
+    <div className='flex flex-col w-screen h-screen text-white p-6'>
       <dialog id='settings_modal' className='modal'>
         <div className='modal-box bg-kColorBlack'>
           <div className='modal-action mt-0 mb-8'>
@@ -117,13 +117,15 @@ function App() {
         />
       </div>
 
-      <div className='flex flex-row justify-center items-center text-8xl font-bold m-16 h-full'>
-        {`${time.hours.toString().padStart(2, '0')}:${time.minutes
-          .toString()
-          .padStart(2, '0')}:${time.seconds.toString().padStart(2, '0')}`}
+      <div className='flex flex-row justify-center items-center text-7xl  sm:text-8xl  font-bold h-full'>
+        <p>
+          {`${time.hours.toString().padStart(2, '0')}:${time.minutes
+            .toString()
+            .padStart(2, '0')}:${time.seconds.toString().padStart(2, '0')}`}
+        </p>
       </div>
 
-      <div className='flex flex-row justify-center items-center gap-8 h-full'>
+      <div className='flex flex-row justify-center items-center gap-8 h-full -mt-24'>
         {isRunning ? (
           <PauseCircle
             sx={{ fontSize: kIconSize }}
